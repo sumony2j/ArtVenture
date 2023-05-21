@@ -30,13 +30,13 @@ pip3 install pillow opencv-python streamlit numpy
 Clone/Download the repository
 
 ```
-git clone
+git clone https://github.com/sumony2j/ArtVenture.git
 ```
 
 Navigate to the repository
 
 ```
-cd 
+cd ArtVenture
 ```
 Run the streamlit app
 
