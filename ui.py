@@ -5,6 +5,7 @@ import os
 import numpy as np
 from function import *
 import sqlite3
+import time
 
 def create_table():
     conn = sqlite3.connect('./Database/feedback.db')
@@ -37,8 +38,11 @@ if uploaded_image is not None:
     image.save("./save_img.jpg")
 
 if uploaded_image is not None:
+    if os.path.exists("./save_img.jpg"):
+        os.remove("./save_img.jpg")
     if filter_type == "Sketch":
-        slider = st.sidebar.slider('Adjust the intensity', 9, 501, step=2)
+        slider = st.sidebar.slider('Adjust the intensity', 9, 501, step=2, value=200)
+        time.sleep(5)
         filtered_image = sketch("./save_img.jpg",slider)
     elif filter_type == "Cartoon":
         filtered_image = cartoon("./save_img.jpg")
@@ -51,22 +55,27 @@ if uploaded_image is not None:
     elif filter_type == "Black&White":
         filtered_image = greyscale("./save_img.jpg")
     elif filter_type == "Blur":
-        slider = st.sidebar.slider('Adjust the intensity', 9, 501, step=2)
+        slider = st.sidebar.slider('Adjust the intensity', 9, 501, step=2, value=60)
+        time.sleep(5)
         filtered_image = blur("./save_img.jpg",slider)
     elif filter_type == "Paint":
-        slider_s = st.sidebar.slider('Adjust the smoothness', 2, 200, step=1)
-        slider_r = st.sidebar.slider('Adjust the edges', 0.0, 1.0, step=0.1)
+        slider_s = st.sidebar.slider('Adjust the smoothness', 2, 200, step=1, value=100)
+        slider_r = st.sidebar.slider('Adjust the edges', 0.0, 1.0, step=0.1, value=0.2)
+        time.sleep(5)
         filtered_image = style("./save_img.jpg",slider_s,slider_r)
     elif filter_type == "Texture":
-        slider_s = st.sidebar.slider('Adjust the smoothness', 2, 200, step=1)
-        slider_r = st.sidebar.slider('Adjust the edges', 0.0, 1.0, step=0.1)
+        slider_s = st.sidebar.slider('Adjust the smoothness', 2, 200, step=1, value=100)
+        slider_r = st.sidebar.slider('Adjust the edges', 0.0, 1.0, step=0.1, value=0.2)
+        time.sleep(5)
         filtered_image = textured("./save_img.jpg",slider_s,slider_r)
     elif filter_type == "Bright":
-        slider = st.sidebar.slider('Adjust the intensity', -200, 501, step=1)
+        slider = st.sidebar.slider('Adjust the intensity', -200, 501, step=1, value=60)
+        time.sleep(5)
         filtered_image = bright("./save_img.jpg",slider)
     elif filter_type == "High Dynamic":
-        slider_s = st.sidebar.slider('Adjust the smoothness', 2, 200, step=1)
-        slider_r = st.sidebar.slider('Adjust the edges', 0.0, 1.0, step=0.1)
+        slider_s = st.sidebar.slider('Adjust the smoothness', 2, 200, step=1, value=100)
+        slider_r = st.sidebar.slider('Adjust the edges', 0.0, 1.0, step=0.1, value=0.2)
+        time.sleep(5)
         filtered_image = HDR("./save_img.jpg",slider_s,slider_r)
 
     with c1:

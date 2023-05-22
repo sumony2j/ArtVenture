@@ -47,8 +47,9 @@ streamlit run ./ui.py
 ## 🎈 Usage <a name="usage"></a>
 
 #### To apply filter on a image
-1. Upload image
-2. Select filter
+1. Select filter
+2. Upload image
+3. Tune parameters for image processing using sliders
 
 #### To send feedback
 1. Fill the feedback form
