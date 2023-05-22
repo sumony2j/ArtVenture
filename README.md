@@ -8,6 +8,7 @@
 
 - [About](#about)
 - [Usage](#usage)
+- [Deployment](#deploy)
 - [Built Using](#built_using)
 - [To Do](#todo)
 - [Author](#authors)
@@ -55,6 +56,8 @@ streamlit run ./ui.py
 2. Click submit button
 3. Feedback will be saved in a sqlite database which can be viewd by various tools.
 
+#### The deployed application on streamlit cloud can be found to the following link
+[ArtVenture-Streamlit](https://sumony2j-artventure-ui-8po1ge.streamlit.app/)
 
 ## ⛏️ Built Using <a name = "built_using"></a>
 
@@ -63,7 +66,7 @@ streamlit run ./ui.py
 - [OpenCv](https://pypi.org/project/opencv-python/) - Main Library
 - [Python3](https://www.python.org/) - Language
 
-## To Do <a name = "todo"></a>
+## 👇 To Do <a name = "todo"></a>
 
 - Need to add more filters
 - Making the user interface more better
