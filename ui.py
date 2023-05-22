@@ -38,8 +38,6 @@ if uploaded_image is not None:
     image.save("./save_img.jpg")
 
 if uploaded_image is not None:
-    if os.path.exists("./save_img.jpg"):
-        os.remove("./save_img.jpg")
     if filter_type == "Sketch":
         slider = st.sidebar.slider('Adjust the intensity', 9, 501, step=2, value=200)
         time.sleep(5)
