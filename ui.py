@@ -25,15 +25,16 @@ def insert_data(name,email,rating,feedback):
 c1,c2 = st.columns(2)
 st.sidebar.header("ArtVenture")
 
-uploaded_image = st.sidebar.file_uploader("Upload an image", type=["jpg", "jpeg", "png"])
-if uploaded_image is not None:
-    image = Image.open(uploaded_image)
-    image.save("./save_img.jpg")
 
 filter_type = st.sidebar.radio(
     "Select a filter type",
     ("Black&White","Bright","Sharp","Sepia","High Dynamic","Invert","Blur","Paint","Sketch","Cartoon","Texture")
 )
+
+uploaded_image = st.sidebar.file_uploader("Upload an image", type=["jpg", "jpeg", "png"])
+if uploaded_image is not None:
+    image = Image.open(uploaded_image)
+    image.save("./save_img.jpg")
 
 if uploaded_image is not None:
     if filter_type == "Sketch":
