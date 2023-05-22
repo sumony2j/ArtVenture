@@ -8,7 +8,6 @@
 
 - [About](#about)
 - [Usage](#usage)
-- [Deployment](#deploy)
 - [Built Using](#built_using)
 - [To Do](#todo)
 - [Author](#authors)
