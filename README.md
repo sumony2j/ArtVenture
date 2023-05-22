@@ -58,6 +58,8 @@ streamlit run ./ui.py
 
 #### The deployed application on streamlit cloud can be found to the following link
 [ArtVenture-Streamlit](https://sumony2j-artventure-ui-8po1ge.streamlit.app/)
+<h5>Note :</h5>
+<p>Due to limited resources and memory size, the hosted application gets crashed sometimes, need to reboot the application to run again</p>
 
 ## ⛏️ Built Using <a name = "built_using"></a>
 
