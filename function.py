@@ -58,6 +58,11 @@ def style(img,sig_s,sig_r):
 
 ## Sketch
 def sketch(img,value):
+    # Ensure value is odd and > 0
+    if value % 2 == 0:
+        value += 1
+    if value <= 0:
+        value = 3  # default fallback
     img = cv2.imread(img)
     gray_img=cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
     img_invert = 255-gray_img
